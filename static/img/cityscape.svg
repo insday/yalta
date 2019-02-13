@@ -1,0 +1,113 @@
+<svg width="34" height="35" viewBox="0 0 34 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>cityscape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(9680 -15074)">
+<g id="cityscape">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-9661.9 15098.4)" fill="#FCC65D"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(-9679.45 15091.2)" fill="#FCC65D"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(-9665.19 15085.2)" fill="#FCC65D"/>
+</g>
+</g>
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path3_fill" transform="translate(-9680 15074.2)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9652.58 15098.4)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9649.29 15098.4)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9652.58 15101.1)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9649.29 15101.1)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9652.58 15103.8)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9649.29 15103.8)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9660.26 15098.4)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9656.97 15098.4)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9660.26 15101.1)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9656.97 15101.1)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9660.26 15103.8)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9656.97 15103.8)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9677.26 15091.2)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9673.97 15091.2)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9677.26 15094)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9673.97 15094)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9677.26 15096.7)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9673.97 15096.7)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9670.68 15091.2)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9670.68 15094)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9670.68 15096.7)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(-9665.19 15084.7)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(-9665.19 15086.8)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(-9665.19 15089)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9665.74 15092.9)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9665.74 15095.1)" fill="#276591"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-9663.55 15092.9)" fill="#276591"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 15.3548 0L 0 0L 0 6.58065L 15.3548 6.58065L 15.3548 0Z"/>
+<path id="path1_fill" d="M 12.0645 0L 0 0L 0 6.58065L 12.0645 6.58065L 12.0645 0Z"/>
+<path id="path2_fill" d="M 4.93548 0L 0 0L 0 4.3871L 4.93548 4.3871L 4.93548 0Z"/>
+<path id="path3_fill" d="M 32.9032 20.8387L 32.9032 18.6452L 26.3226 18.6452L 26.3226 20.8387L 25.2258 20.8387L 25.2258 18.6452L 21.9355 18.6452L 21.9355 8.22581L 20.8387 8.22581L 20.8387 6.03226L 19.7419 6.03226L 19.7419 4.68323L 15.9032 1.3929L 15.9032 0L 14.8065 0L 14.8065 1.3929L 10.9677 4.68323L 10.9677 6.03226L 9.87097 6.03226L 9.87097 8.22581L 8.77419 8.22581L 8.77419 11.5161L 1.64516 11.5161L 1.64516 13.7097L 0 13.7097L 0 34L 17.5484 34L 18.0968 34L 25.2258 34L 26.3226 34L 34 34L 34 20.8387L 32.9032 20.8387ZM 24.129 20.8387L 19.7419 20.8387L 19.7419 19.7419L 24.129 19.7419L 24.129 20.8387ZM 12.0645 5.18774L 15.3548 2.36739L 18.6452 5.18774L 18.6452 6.03226L 12.0645 6.03226L 12.0645 5.18774ZM 10.9677 7.12903L 19.7419 7.12903L 19.7419 8.22581L 10.9677 8.22581L 10.9677 7.12903ZM 2.74194 12.6129L 10.4194 12.6129L 10.4194 13.7097L 2.74194 13.7097L 2.74194 12.6129ZM 1.09677 14.8065L 12.0645 14.8065L 12.0645 26.3226L 12.0815 26.3226C 11.866 26.4827 11.6763 26.6725 11.5161 26.888C 11.016 26.2162 10.2225 25.7742 9.32258 25.7742C 8.42268 25.7742 7.62916 26.2162 7.12903 26.888C 6.6289 26.2162 5.83539 25.7742 4.93548 25.7742C 3.42358 25.7742 2.19355 27.0042 2.19355 28.5161C 2.19355 29.8399 3.13732 30.9477 4.3871 31.2027L 4.3871 32.9032L 1.09677 32.9032L 1.09677 14.8065ZM 4.3871 30.0604C 3.75042 29.8334 3.29032 29.2301 3.29032 28.5161C 3.29032 27.6091 4.02845 26.871 4.93548 26.871C 5.84252 26.871 6.58065 27.6091 6.58065 28.5161C 6.58065 29.2301 6.12055 29.8334 5.48387 30.0604L 5.48387 29.0645L 4.3871 29.0645L 4.3871 30.0604ZM 5.48387 31.2027C 6.15619 31.0656 6.7331 30.6762 7.12903 30.1443C 7.52497 30.6762 8.10187 31.0656 8.77419 31.2027L 8.77419 32.9032L 5.48387 32.9032L 5.48387 31.2027ZM 8.77419 29.0645L 8.77419 30.0604C 8.13752 29.8334 7.67742 29.2301 7.67742 28.5161C 7.67742 27.6091 8.41555 26.871 9.32258 26.871C 10.2296 26.871 10.9677 27.6091 10.9677 28.5161C 10.9677 29.2301 10.5076 29.8334 9.87097 30.0604L 9.87097 29.0645L 8.77419 29.0645ZM 9.87097 31.2027C 10.5433 31.0656 11.1202 30.6762 11.5161 30.1443C 11.9121 30.6762 12.489 31.0656 13.1613 31.2027L 13.1613 32.9032L 9.87097 32.9032L 9.87097 31.2027ZM 13.1613 29.0645L 13.1613 30.0604C 12.5246 29.8334 12.0645 29.2301 12.0645 28.5161C 12.0645 27.6091 12.8026 26.871 13.7097 26.871C 14.6167 26.871 15.3548 27.6091 15.3548 28.5161C 15.3548 29.2301 14.8947 29.8334 14.2581 30.0604L 14.2581 29.0645L 13.1613 29.0645ZM 14.2581 32.9032L 14.2581 31.2027C 15.5078 30.9477 16.4516 29.8405 16.4516 28.5161C 16.4516 27.0042 15.2216 25.7742 13.7097 25.7742C 13.5221 25.7742 13.3384 25.7934 13.1613 25.8296L 13.1613 13.7097L 11.5161 13.7097L 11.5161 11.5161L 9.87097 11.5161L 9.87097 9.32258L 20.8387 9.32258L 20.8387 18.6452L 18.6452 18.6452L 18.6452 20.8387L 17.5484 20.8387L 17.5484 32.9032L 14.2581 32.9032ZM 25.2258 32.9032L 18.6452 32.9032L 18.6452 21.9355L 25.2258 21.9355L 25.2258 32.9032ZM 27.4194 19.7419L 31.8065 19.7419L 31.8065 20.8387L 27.4194 20.8387L 27.4194 19.7419ZM 32.9032 32.9032L 26.3226 32.9032L 26.3226 21.9355L 32.9032 21.9355L 32.9032 32.9032Z"/>
+<path id="path4_fill" d="M 1.09677 0L 0 0L 0 1.09677L 1.09677 1.09677L 1.09677 0Z"/>
+<path id="path5_fill" d="M 4.93548 0L 0 0L 0 1.09677L 4.93548 1.09677L 4.93548 0Z"/>
+</defs>
+</svg>

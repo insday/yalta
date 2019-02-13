@@ -1,0 +1,36 @@
+.authSocials {
+	display: flex;
+	flex-flow: wrap;
+	margin: -8px;
+
+
+	
+	&__item {
+		padding: 8px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 122px;
+		height: 48px;
+		border-radius: 10px;
+		
+		&--vk {
+			background-color: #506C8F;
+		}
+		
+		&--fb{
+			background-color: #405182;
+			opacity: .6;
+			pointer-events: none;
+		}
+
+		&--google {
+			border: 1px solid #F0F0F0;
+			opacity: .6;
+			pointer-events: none;
+		}
+	}
+}

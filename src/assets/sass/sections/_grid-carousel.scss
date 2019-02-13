@@ -1,0 +1,61 @@
+.grid-carousel {
+	position: relative;
+
+	@include r($mob) {
+		margin: 0 0 0;
+		padding-bottom: 55px;
+	}
+
+	.grid-slider {
+		margin-top: 50px;
+		
+		@include r($tablet) {
+			padding-right: 175px;
+			overflow: visible;
+		}
+
+		@include r($mob) {
+			margin-top: 25px;
+			padding-right: 30px;
+		}
+	}
+
+	.swiper-container {
+		padding-bottom: 50px;
+
+		@include r($mob) {
+			padding-bottom: 35px;
+		}
+	}
+
+	.swiper-wrapper {
+
+		.swiper-slide {
+			height: auto;
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&-bullet {
+			width: 6px;
+			height: 6px;
+			background: #BFCDD6;
+			border: 2px solid transparent;
+			transition: .2s all;
+			opacity: 1;
+
+			&-active {
+				width: 10px;
+				height: 10px;
+				border-color: #00BFD9;
+				background-color: transparent;
+			}
+		}
+	}
+}
+

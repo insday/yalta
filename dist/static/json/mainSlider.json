@@ -1,0 +1,57 @@
+{
+  "heroMain": [
+    {
+      "imgPath": "/static/img/hero1.jpg"
+    },
+    {
+      "imgPath": "/static/img/hero2.jpg"
+    },
+    {
+      "imgPath": "/static/img/hero3.jpg"
+    }
+  ],
+  "locationSlider": [
+    {
+      "title": "Загородный дом 300m2  с выходом в заповедник",
+      "info": [
+        {
+          "icon": "/static/img/area.svg",
+          "value": "300 м2"
+        },
+        {
+          "icon": "/static/img/price.svg",
+          "value": "250 000 у.е."
+        }
+      ],
+      "address": "г. Алушта, ул. Безымянная"
+    },
+    {
+      "title":  "Мини-отель на 10 номеров в первой линии от пляжа в Мисхоре",
+      "info": [
+        {
+          "icon": "/static/img/area.svg",
+          "value": "150 м2"
+        },
+        {
+          "icon": "/static/img/price.svg",
+          "value": "17 560 000 руб"
+        }
+      ],
+      "address": "Ялта, Нижний Мисхор"
+    },
+    {
+      "title": "Квартира в доме в 200 метрах от пляжа",
+      "info": [
+        {
+          "icon": "/static/img/area.svg",
+          "value": "150 м2"
+        },
+        {
+          "icon": "/static/img/price.svg",
+          "value": "17 560 000 руб"
+        }
+      ],
+      "address": "г. Алушта, ул. Безымянная Центральный район"
+    }
+  ]
+}

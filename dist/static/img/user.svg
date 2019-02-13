@@ -1,0 +1,18 @@
+<svg width="19" height="25" viewBox="0 0 19 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>user</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(9192 -13711)">
+<g id="user">
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(-9188 13711)" fill="#BFCDD6"/>
+</g>
+<g id="Rectangle 4">
+<use xlink:href="#path1_fill" transform="translate(-9192 13723)" fill="#BFCDD6"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 11 5.5C 11 8.53757 8.53757 11 5.5 11C 2.46243 11 0 8.53757 0 5.5C 0 2.46243 2.46243 0 5.5 0C 8.53757 0 11 2.46243 11 5.5Z"/>
+<path id="path1_fill" d="M 0 3.82353L 9.5 0L 19 3.82353L 19 13L 0 13L 0 3.82353Z"/>
+</defs>
+</svg>

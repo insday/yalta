@@ -1,0 +1,33 @@
+.form__checkbox {
+	position: relative;
+	padding-left: 5px;
+
+	label {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		font-size: 13px;
+	}
+
+	[type="checkbox"] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 0;
+	}
+
+	[type="checkbox"]:checked + span {
+		border: 2px solid #00BFD9;
+		background: #fff url('/static/img/checked.svg') no-repeat center center;
+	}
+
+	.checkbox__target {
+		display: block;
+		width: 16px;
+		height: 16px;
+		background: #fff;
+		border: 1px solid #C4C4C4;
+		margin-right: 12px;
+		border-radius: 2px;
+	}
+}

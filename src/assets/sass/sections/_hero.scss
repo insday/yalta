@@ -1,0 +1,173 @@
+.hero {
+	padding-top: 64px;
+	position: relative;
+	min-height: 1000px;
+	padding-bottom: 50px;
+
+	@include r($tablet) {
+		min-height: 100%;
+		padding-bottom: 40px;
+		padding-top: 62px;
+	}
+
+	@include r($mob) {
+		padding-top: 55px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 584px;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(180deg, rgba(45, 76, 97, 0) 0%, #2D4C61 100%);
+		z-index: 10;
+		pointer-events: none;
+
+		@include r($mob) {
+			height: 64px;
+		}
+	}
+
+	&Slider__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #000;
+			opacity: .25;
+			z-index: 2;
+		}
+
+		> div {
+			height: 100%;
+			width: 100%;
+		}
+
+		.heroSlider__slide {
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-position: bottom left;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 10;
+		color: #fff;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+
+		@include r($mob) {
+			display: block;
+		}
+	}
+
+	&__title {
+		font-size: 80px;
+		font-weight: 800;
+		margin-left: -2px;
+		line-height: 1.1;
+
+		@include r($mob) {
+			font-size: 34px;
+			text-align: center;
+			margin-left: 0;
+		}
+	}
+
+	&__location {
+		margin-top: 12px;
+		font-size: 40px;
+		line-height: 1.35;
+
+		@include r($tablet) {
+			margin-top: 4px;
+		}
+
+		@include r($mob) {
+			font-size: 20px;
+
+			span {
+				display: block;
+				white-space: nowrap;
+			}
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__button {
+		margin-top: 55px;
+
+		@include r($tablet) {
+			margin-top: 25px;
+		}
+
+		@include r($mob) {
+			margin-top: 12px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__left {
+		> div {
+			display: flex;
+			flex-flow: column;
+			align-items: flex-start;
+
+			@include r($mob) {
+				align-items: center;
+			}
+		}
+	}
+
+	&__right {
+		padding-top: 175px;
+
+		@include r($mob) {
+			padding-top: 95px;
+			margin: 0 -10px;
+
+			.locationSlider {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__bottom {
+		margin-top: 142px;
+
+		@include r($tablet) {
+			margin-top: 110px;
+		}
+
+		@include r($mob) {
+			display: none;
+		}
+
+		.offer {
+			max-width: 850px;
+			margin: 0 auto;
+		}
+	}
+}

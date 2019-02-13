@@ -1,0 +1,146 @@
+.advantages {
+	color: #fff;
+	padding-top: 95px;
+	padding-bottom: 105px;
+	background-size: cover;
+	background-position: top center;
+	min-height: 100%;
+	//position: relative;
+	//z-index: 10;
+
+	@include r($mob) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.section__title {
+		text-align: center;
+		color: #fff;
+	}
+
+	&Slider {
+		margin-top: 45px;
+		padding-bottom: 30px;
+
+		@include rmin($mob) {
+			display: none;
+		}
+
+		.swiper-pagination {
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 10px;
+
+			&-bullet {
+				width: 4px;
+				height: 4px;
+				background: #fff;
+				border: 2px solid transparent;
+				transition: .2s all;
+				opacity: 1;
+				margin: 0 6px;
+
+				&-active {
+					width: 10px;
+					height: 10px;
+					border-color: #00BFD9;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-flow: wrap;
+		padding: 0 100px;
+		margin-top: 80px;
+		margin-left: -15px;
+		margin-right: -15px;
+
+		@include r($tablet) {
+			padding: 0 25px;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		@include r($breakpoint1) {
+			padding: 0;
+		}
+
+		@include r($mob) {
+			display: none;
+			margin-top: 40px;
+		}
+
+		.advantagesItem {
+			width: 33.33%;
+			padding: 0 15px;
+			margin-bottom: 45px;
+
+			@include r($tablet) {
+				padding: 0 10px;
+			}
+
+			@include r($mob) {
+				width: 100%;
+			}
+		}
+	}
+
+	&Item {
+		color: #fff;
+		display: flex;
+
+		@include r($mob) {
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__icon {
+			margin-right: 18px;
+			width: 100%;
+			max-width: 50px;
+
+			@include r($mob) {
+				margin-right: 0;
+				max-width: 90px;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&__title {
+			font-size: 18px;
+			font-weight: 500;
+			padding-right: 50px;
+			line-height: 1.25;
+
+			@include r($mob) {
+				margin-top: 20px;
+				padding-right: 0;
+				text-align: center;
+			}
+		}
+
+		&__link {
+			display: block;
+			color: #fff;
+			font-size: 13px;
+			margin-top: 10px;
+			font-weight: 300;
+			padding-right: 50px;
+			line-height: 1.35;
+
+			@include r($mob) {
+				padding-right: 0;
+				text-align: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+:root {
+	--browser-address-bar: 0px;
+}
+
+.out {
+	position: relative;
+	overflow: hidden;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+	transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+	/* .component-fade-leave-active до версии 2.1.8 */ {
+	opacity: 0;
+}
+
+.v--modal-overlay {
+	z-index: 99999;
+	background: linear-gradient(0deg, rgba(11, 93, 150, 0.7), rgba(11, 93, 150, 0.7));
+}
+
+.v--modal {
+	border-radius: 0;
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03);
+}
+
+ //{
+	//transform: translateX(30%);
+	//opacity: 0;
+//}
+
+.page-nav {
+	display: inline-block;
+
+	&__item {
+		display: inline-block;
+		border-radius: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: .3s all;
+
+		&.is-hidden {
+			opacity: .5;
+			pointer-events: none;
+		}
+
+		a {
+			display: block;
+			width: 46px;
+			height: 46px;
+			border-radius: 100%;
+		}
+		
+		&:hover {
+			background-color: #fff;
+		}
+		
+		&-prev {
+			background-image: url('~/static/img/left.svg');
+		}
+
+		&-next {
+			background-image: url('~/static/img/right.svg');
+		}
+	}
+}
+
+
+.item-price {
+	&:after {
+		content: ' руб.';
+		display: inline-block;
+		font-family: inherit;
+		font-size: inherit;
+	}
+}
+
+
+#app {
+	transition: .3s all;
+
+	&.is-show-contacts {
+		overflow: visible;
+		transform: translateY(500px);
+
+		.out-content {
+			overflow: hidden;
+		}
+	}
+}

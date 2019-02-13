@@ -1,0 +1,14 @@
+.logo {
+
+  a, span {
+    color: #276591;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 18px;
+
+    @include r($mob) {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}

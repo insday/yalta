@@ -1,0 +1,87 @@
+@import "grid";
+
+.container-fluid,
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+
+	@include r($mob) {
+		min-width: auto;
+	}
+}
+
+.container {
+	max-width: 1170px;
+
+	@include r($tablet) {
+		padding: 0 42px;
+	}
+
+	@include r($mob) {
+		padding: 0 16px;
+	}
+}
+
+.container-2 {
+	max-width: 1200px;
+}
+
+.color-black {
+	color: #000;
+}
+
+.title-50 {
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.title-60 {
+	font-size: 60px;
+	font-weight: 700;
+}
+
+.title-36 {
+	font-size: 36px;
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.full-vp {
+	height: 100vh;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.flex-vbottom {
+	display: flex;
+	align-items: flex-end;
+}
+
+.flex-vcenter {
+	display: flex;
+	align-items: center;
+}
+
+.flex-hcenter {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-vhcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+

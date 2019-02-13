@@ -1,0 +1,160 @@
+.map-container {
+	width: 100%;
+}
+
+.map {
+	width: 100%;
+	height: 550px;
+	position: fixed;
+}
+
+.map-price-container {
+	overflow: visible !important;
+
+	.map-price-marker {
+		background-color: #089AE8;
+		color: #fff;
+		font-weight: 600;
+		font-size: 10px;
+		text-align: center;
+	}
+}
+
+.map-price-container-hovered {
+	overflow: visible !important;
+
+	.map-price-marker {
+		background-color: rgb(0, 132, 137);
+		color: white;
+	}
+}
+
+.map-price-marker {
+	position: absolute;
+	left: -37px;
+	top: -25px;
+	width: 65px;
+	height: 25px;
+	border-radius: 3px;
+	line-height: 15px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+	font-size: 12px;
+	font-weight: 700;
+	//border: 1px solid #089AE8;
+	z-index: 1;
+	padding: 5px;
+
+	&::after {
+		position: absolute;
+		content: "";
+		border-style: solid;
+		left: 31px;
+		top: 100%;
+		border-width: 5px;
+		border-color: #089AE8 transparent transparent;
+	}
+}
+
+.info-window {
+	background: white;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.07);
+	margin-bottom: 5px;
+
+	.info {
+		padding: 10px;
+		text-align: left;
+		width: 280px;
+		overflow-wrap: break-word;
+
+		.title {
+			font-size: 18px;
+			font-weight: 500;
+			padding-bottom: 5px;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		border-style: solid;
+		left: 44%;
+		bottom: -10px;
+		border-width: 10px;
+		border-color: white transparent transparent;
+	}
+}
+
+.siema-container {
+	position: relative;
+
+	&:hover {
+		button {
+			color: white;
+		}
+
+		.siema {
+			filter: brightness(85%);
+		}
+	}
+
+	.siema {
+		height: 186px;
+		width: 280px;
+	}
+
+	.indicators {
+		text-align: center;
+		color: #b3b3b3;
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			padding: 0px 5px;
+		}
+
+		.active {
+			color: #e6e6e6;
+			display: inline-block;
+		}
+	}
+
+	.prev,
+	.next {
+		font-size: 45px;
+		border: none;
+		background: rgba(0, 0, 0, 0);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		color: transparent;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.prev {
+		left: 5%;
+	}
+
+	.next {
+		right: 5%;
+	}
+}
+
+// remove close icon
+.gm-style-iw + div {
+	display: none;
+}
+
+.gm-style-iw {
+	top: 42px !important;
+}

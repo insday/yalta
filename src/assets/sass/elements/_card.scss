@@ -1,0 +1,197 @@
+.card_place {
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.03);
+	display: block;
+	height: 100%;
+
+	&:hover {
+		.card__title {
+			color: #0899E8;
+		}
+
+		.card__bottom {
+			color: #0899E8;
+
+			svg {
+				fill: #0899E8;
+			}
+		}
+	}
+
+	&.card_xs {
+		font-family: 'Muller';
+		max-width: 300px;
+
+		.card__photo {
+			height: 150px;
+		}
+
+		.card__title {
+			font-size: 20px;
+			line-height: 26px;
+			letter-spacing: 0;
+		}
+
+		.card__body {
+			padding: 16px 16px;
+			font-weight: 600;
+		}
+
+		.card__location {
+			margin-top: 12px;
+		}
+
+		.card__bottom {
+			padding-top: 15px;
+
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.card__photo {
+		height: 248px;
+		background-size: cover;
+		background-position: center center;
+		background-color: rgba(#D6D6D6, .6);
+
+		@include r($mob) {
+			height: 160px;
+		}
+	}
+
+	.card__body {
+		background-color: #fff;
+		padding: 32px;
+		height: calc(100% - 248px);
+		display: flex;
+		flex-flow: column;
+
+		@include r($mob) {
+			padding: 20px 18px 26px;
+			height: calc(100% - 160px);
+		}
+	}
+
+	.card__title {
+		font-size: 22px;
+		font-weight: 600;
+		line-height: 1.2;
+		letter-spacing: 0.8px;
+		//min-height: 52px;
+		transition: .3s all;
+
+		@include r($mob) {
+			font-weight: 500;
+			font-size: 20px;
+			letter-spacing: 0;
+			line-height: 1.3;
+		}
+	}
+
+	.card__location {
+		margin-top: 20px;
+		display: flex;
+		font-size: 14px;
+
+		@include r($mob) {
+			margin-top: 8px;
+		}
+
+		span {
+			line-height: 1.25;
+		}
+
+		svg {
+			margin-right: 10px;
+		}
+	}
+
+	.card__info {
+		display: flex;
+		flex-flow: wrap;
+		margin: 23px -16px 0;
+
+		@include r($mob) {
+			margin-top: 17px;
+			display: block;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: 4px 16px;
+
+			svg {
+				margin-right: 10px;
+
+				@include r($mob) {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.card__descr {
+
+		@include r($mob) {
+			display: none;
+		}
+	}
+
+	.card__bottom {
+		padding-top: 30px;
+		margin-top: auto;
+		color: $primary-color;
+
+		@include r($mob) {
+			padding-top: 15px;
+		}
+
+		svg {
+			margin-left: 10px;
+			fill: $primary-color;
+
+			@include r($mob) {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+@include rmin($mob) {
+	.card_place--row {
+		display: flex;
+
+		.card__photo {
+			width: 273px;
+			min-height: 300px;
+			height: auto;
+		}
+
+		.card__body {
+			width: calc(100% - 273px);
+			height: auto;
+			padding: 30px 38px 25px;
+		}
+
+		.card__title {
+			min-height: auto;
+		}
+
+		.card__location {
+			margin-top: 18px;
+		}
+
+		.card__descr {
+			font-size: 14px;
+			margin-top: 20px;
+			margin-right: -10px;
+			line-height: 1.5;
+		}
+
+		.card__bottom {
+			padding-top: 25px;
+		}
+	}
+}

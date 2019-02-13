@@ -1,0 +1,22 @@
+.page-profile {
+	padding-bottom: 100px;
+
+	.profile-head {
+		padding: 50px 0;
+	}
+
+	.grid-list {
+		display: flex;
+		flex-flow: wrap;
+		margin: -15px;
+
+		.grid-item {
+			width: 33.33%;
+			padding: 15px;
+
+			@include r($mob) {
+				width: 100%;
+			}
+		}
+	}
+}

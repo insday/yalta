@@ -1,0 +1,161 @@
+.locationSlider {
+	background: rgba(45, 76, 97, 0.6);
+	border-radius: 5px;
+	width: 325px;
+	padding: 23px 24px;
+
+	small {
+		font-size: 100%;
+	}
+
+	@include r($tablet) {
+		max-width: 304px;
+		padding: 23px 31px;
+	}
+
+	@include r($mob) {
+		background: transparent;
+		border-radius: 0;
+		max-width: 100%;
+		padding: 0;
+
+		.swiper-container {
+			padding-right: 30px;
+			overflow: visible;
+
+			.swiper-wrapper {
+
+				.swiper-slide {
+					height: auto;
+				}
+			}
+		}
+
+		.swiper-pagination {
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 10px;
+
+			&-bullet {
+				width: 4px;
+				height: 4px;
+				background: #fff;
+				border: 2px solid transparent;
+				transition: .2s all;
+				opacity: 1;
+				margin: 0 6px;
+
+				&-active {
+					width: 10px;
+					height: 10px;
+					border-color: #00BFD9;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	.swiper-slide {
+
+		a {
+			color: #FFFFFF;
+		}
+
+		@include r($mob) {
+			background: rgba(45, 76, 97, 0.6);
+			border-radius: 5px;
+			padding: 15px 16px 18px;
+			border: 1px solid rgba(#FFFFFF, .30);
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: 500;
+		letter-spacing: 0.6px;
+	}
+
+	&-info {
+		display: flex;
+		flex-flow: wrap;
+		font-size: 14px;
+		margin-top: 13px;
+
+		@include r($mob) {
+			margin-top: 8px;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+
+			&:not(:first-child) {
+				margin-left: 20px;
+
+				@include r($tablet) {
+					margin-left: 15px;
+				}
+			}
+
+			span {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&__address {
+		margin-top: 15px;
+		font-size: 14px;
+		display: flex;
+		align-items: flex-start;
+
+		@include r($mob) {
+			margin-top: 11px;
+		}
+
+		img {
+			margin-top: 2px;
+		}
+
+		span {
+			margin-left: 12px;
+			line-height: 1.5;
+		}
+
+	}
+
+	.swiper-controls {
+		border-top: 1px solid rgba(233, 245, 247, 0.5);
+		margin-top: 16px;
+		padding-top: 12px;
+		margin-bottom: -13px;
+
+		@include r($mob) {
+			border-top: 0;
+			justify-content: center;
+		}
+
+		.swiper-pagination {
+			margin-left: 10px;
+			padding-right: 5px;
+		}
+
+		.swiper-button-next {
+			background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23fff'%2F><%2Fsvg>");
+
+			@include r($mob) {
+				display: none;
+			}
+		}
+
+		.swiper-button-prev {
+			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23fff'%2F%3E%3C%2Fsvg%3E");
+
+			@include r($mob) {
+				display: none;
+			}
+		}
+	}
+}

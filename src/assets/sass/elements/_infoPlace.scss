@@ -1,0 +1,22 @@
+.infoPlace {
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 -16px 0;
+
+	@include r($mob) {
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 4px 16px;
+
+		svg {
+			margin-right: 10px;
+			fill: $black;
+
+		}
+	}
+}

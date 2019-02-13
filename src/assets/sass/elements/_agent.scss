@@ -1,0 +1,63 @@
+.agent {
+	max-width: 130px;
+
+	@include r($mob) {
+		width: auto;
+		max-width: 150%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	&__wrapper {
+		min-width: 130px;
+		max-width: 130px;
+		position: relative;
+
+		@include r($mob) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__photo {
+		border-radius: 100%;
+		width: 130px;
+		height: 130px;
+		border: 3px solid #FFFFFF;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.4);
+		background-color: $primary-color;
+		background-size: cover;
+		background-position: center center;
+
+		@include r($mob) {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	&__info {
+		margin-top: 15px;
+		color: $primary-color;
+		padding-left: 17px;
+
+		@include r($mob) {
+			margin-top: 0;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		letter-spacing: 0.4px;
+	}
+
+	&__subtitle {
+		margin-top: 7px;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+
+		@include r($mob) {
+		}
+	}
+}

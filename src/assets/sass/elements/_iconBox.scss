@@ -1,0 +1,38 @@
+.iconBox {
+
+	&__wrapper {
+		max-width: 272px;
+
+		@include r($tablet) {
+			max-width: 200px;
+		}
+	}
+
+	&__icon {
+		width: 272px;
+		height: 272px;
+		border: 6px solid #FFFFFF;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+		@include r($tablet) {
+			width: 200px;
+			height: 200px;
+			padding: 43px;
+		}
+
+		svg {
+			margin-top: -15px;
+		}
+	}
+
+	.btn-catalog {
+		padding-left: 0;
+		white-space: nowrap;
+		justify-content: center;
+	}
+
+}

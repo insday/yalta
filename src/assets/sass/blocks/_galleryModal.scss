@@ -1,0 +1,43 @@
+[data-modal="gallery-modal"] {
+
+	.v--modal {
+		background-color: transparent;
+	}
+
+	.modal-close {
+		top: 50px;
+		right: 50px;
+		z-index: 10;
+
+		@include r($mob) {
+			top: 10px;
+			right: 10px;
+		}
+	}
+
+	.modal-close svg {
+		fill: #fff;
+		width: 30px !important;
+		height: 30px !important;
+	}
+
+	.modal-wrapper {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+.galleryModal {
+
+	@include r($mob) {
+		margin-top: 70px;
+	}
+
+
+	.swiper-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+	}
+}

@@ -1,0 +1,27 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+
+	span, a {
+		color: $primary-color;
+		font-size: 16px;
+	}
+
+	a:hover {
+		color: $primary-color-lighten;
+	}
+
+	&__item:not(:first-child) {
+		&:before {
+			content: '|';
+			display: inline-block;
+			font-size: 16px;
+			color: $primary-color;
+			margin: 0 10px;
+
+			@include r($mob) {
+				margin: 0 8px;
+			}
+		}
+	}
+}

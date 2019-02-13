@@ -1,0 +1,90 @@
+section.single {
+	padding: 68px 0 64px;
+
+	@include r($mob) {
+		padding: 45px 0;
+	}
+	
+	.date {
+		font-size: 22px;
+		font-weight: 500;
+		color: #4D4D4D;
+		margin-top: 20px;
+		display: block;
+
+		@include r($mob) {
+			font-size: 16px;
+		}
+	}
+
+	.section__head {
+		display: flex;
+		align-items: center;
+	}
+	
+	.single__body {
+		background-color: #fff;
+		padding: 55px;
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.03);
+		position: relative;
+
+		&:not(:first-child) {
+			margin-top: 65px;
+		}
+
+		@include r($mob) {
+			padding: 16px 55px 16px 16px;
+
+			&:not(:first-child) {
+				margin: 10px -16px 0;
+			}
+		}
+
+		.btn-close {
+
+			@include r($mob) {
+				top: 16px;
+				right: 16px;
+			}
+
+			svg {
+
+				@include r($mob) {
+					width: 25px !important;
+					height: 25px !important;
+				}
+			}
+		}
+		
+		p {
+			font-size: 14px;
+			line-height: 1.7;
+			color: #3D3D3D;
+			margin: 20px 0;
+
+			@include r($mob) {
+				margin: 15px 0;
+			}
+		}
+
+		img {
+			margin: 50px 0;
+
+			@include r($mob) {
+				margin: 25px 0;
+			}
+		}
+	}
+}
+
+
+h1 {
+	line-height: 1.4;
+	font-size: 40px;
+	color: #276591;
+	text-transform: uppercase;
+
+	@include r($mob) {
+		font-size: 28px;
+	}
+}

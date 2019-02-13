@@ -1,0 +1,26 @@
+$font-path: '~/static/fonts/';
+
+@mixin font-face($font-name, $font-weight) {
+  $file-path: $font-path + 'Muller' + $font-name;
+
+  @font-face {
+    font-family: 'Muller';
+    src: url($file-path + '.eot?#iefix') format('embedded-opentype'),
+      url($file-path + '.otf') format('opentype'),
+      url($file-path + '.woff') format('woff'),
+      url($file-path + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: normal;
+  }
+}
+
+@include font-face('Black', 900);
+@include font-face('ExtraBold', 800);
+@include font-face('Bold', 700);
+@include font-face('Medium', 600);
+@include font-face('Hairline', 1000);
+@include font-face('Heavy', 1100);
+@include font-face('Regular', 400);
+@include font-face('Light', 300);
+@include font-face('UltraLight', 200);
+@include font-face('Thin', 100);

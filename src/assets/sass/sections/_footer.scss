@@ -1,0 +1,153 @@
+.footer {
+	color: #fff;
+	background: linear-gradient(90deg, #0899E8 0%, #00BFD9 49.72%, #33D6C0 100%);
+	font-size: 18px;
+	padding: 50px 0;
+	position: relative;
+	z-index: 30;
+
+	@include r($mob) {
+		padding: 40px 0 20px;
+	}
+
+	.container {
+
+		@include r($mob) {
+			padding: 0 27px;
+		}
+	}
+
+	.copyright {
+
+		@include r($mob) {
+			font-size: 16px;
+		}
+	}
+
+	p {
+		margin: 0;
+		line-height: 1.2;
+
+		@include r($mob) {
+			font-weight: normal;
+		}
+	}
+
+	.footer__top {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -30px;
+		position: relative;
+
+		@include r($mob) {
+			flex-flow: column;
+			justify-content: center;
+		}
+
+		.footer__column {
+			padding: 0 30px;
+
+			@include r($mob) {
+				text-align: center;
+				margin-bottom: 25px;
+			}
+		}
+
+		.footer__column:nth-child(2) {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@include r($mob) {
+				position: relative;
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+
+		.footer__column:last-child {
+			margin-top: -10px;
+
+			@include r($mob) {
+				margin-top: 0;
+			}
+		}
+
+		.phone {
+			color: #fff;
+			font-size: 22px;
+			display: block;
+			font-weight: normal;
+
+			@include r($mob) {
+				text-align: center;
+			}
+		}
+
+		.mail {
+			color: #fff;
+			font-size: 18px;
+			margin-top: 23px;
+			display: block;
+
+			@include r($mob) {
+				text-align: center;
+			}
+		}
+	}
+
+	.footer__bottom {
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		align-items: center;
+		padding-top: 15px;
+
+		@include r($mob) {
+			padding-top: 25px;
+			margin: 0 -10px;
+		}
+
+		span {
+			font-weight: normal;
+		}
+	}
+}
+
+.dev {
+	margin-right: -7px;
+
+	@include r($mob) {
+		margin-right: 0;
+		display: flex;
+	}
+
+	&__link {
+		color: #fff;
+		letter-spacing: 9px;
+		font-size: 16px;
+
+		@include r($mob) {
+			line-height: 1;
+			font-size: 10px;
+			letter-spacing: 5px;
+		}
+	}
+}
+
+.location {
+	display: flex;
+
+	@include r($mob) {
+		justify-content: center;
+	}
+
+	&__desc {
+		max-width: 250px;
+	}
+
+	&__icon {
+		margin-right: 12px;
+	}
+}

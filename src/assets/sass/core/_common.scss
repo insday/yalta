@@ -1,0 +1,176 @@
+html {
+	font-size: 16px;
+	font-family: 'Muller';
+	font-weight: 500;
+	color: $black;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color: #EBF1F2;
+}
+
+* {
+	outline: none !important;
+	box-sizing: border-box;
+}
+
+.js-overflow {
+	overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $black;
+	text-decoration: none;
+	transition: .2s all;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+#app {
+
+	@include r(1000) {
+		overflow: hidden;
+		width: 1000px;
+	}
+
+	@include r($mob) {
+		width: auto;
+		overflow: hidden;
+	}
+}
+
+.section__title {
+	text-transform: uppercase;
+	font-size: 55px;
+	font-weight: 200;
+	color: $primary-color;
+
+	@include r($mob) {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	&_sm {
+		font-size: 32px;
+		font-weight: 700;
+		text-transform: inherit;
+		color: $primary-color-darken;
+
+		@include r($mob) {
+			font-size: 24px;
+			text-align: left;
+		}
+	}
+}
+
+@include rmin($mob) {
+	.fixed {
+		position: fixed;
+	}
+
+	.absolute {
+		position: absolute;
+	}
+}
+
+
+.no-scroll {
+	overflow: hidden;
+
+	.footer {
+	}
+}
+
+
+body {
+	//overflow: hidden;
+}
+
+.fullpage-container {
+	height: 100vh;
+}
+
+#app {
+}
+
+
+.fullpage-wp .page > section {
+	height: 100%;
+}
+
+
+.ymap {
+	width: 100%;
+	height: 100%;
+}
+
+
+article {
+	color: $primary-color-darken;
+
+	p {
+		margin: 22px 0;
+		line-height: 1.62;
+	}
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.4;
+
+	@include r($mob) {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 26px;
+	}
+}
+
+
+.hidden-desktop {
+
+	@include r($mob) {
+		display: none;
+	}
+}
+
+
+.hidden-mobile {
+	display: none;
+
+	@include rmin($mob) {
+		display: block;
+	}
+}

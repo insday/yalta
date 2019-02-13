@@ -1,0 +1,69 @@
+.box_contacts {
+	background-color: #e9f5f7;
+	text-align: center;
+	font-size: rem(36px);
+	font-weight: bold;
+	color: $primary-color;
+	padding: rem(80px) 0 rem(72px);
+	position: fixed;
+	top: 0;
+	transform: translateY(-500px);
+	left: 0;
+	right: 0;
+	height: 500px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+
+	@include r($mob) {
+		font-size: rem(24px);
+	}
+
+	&.is-active {
+
+		&:before {
+			opacity: 0;
+		}
+	}
+
+	.btn-close {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 0;
+		right: 0;
+		background-image: url('~/static/img/close.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+
+
+		@include r($mob) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	a {
+		color: $primary-color;
+	}
+
+	.phone {
+		font-size: rem(70px);
+		margin-bottom: rem(5px);
+
+		@include r($mob) {
+			font-size: rem(35px);
+		}
+	}
+
+	.mail {
+		font-size: rem(55px);
+		margin-bottom: rem(23px);
+
+		@include r($mob) {
+			margin-top: 15px;
+			font-size: rem(25px);
+		}
+	}
+}
