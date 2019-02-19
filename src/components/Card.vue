@@ -76,8 +76,7 @@
         return '/images/data/' + newUrl;
       },
       formatPrice(value) {
-	    if (isNaN(value))
-			value = 0
+	    if (typeof (value) === 'undefined') return;
         let val = (value.split(',')[0]/1).toFixed(0)
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
       },

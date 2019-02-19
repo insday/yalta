@@ -19,7 +19,7 @@ const infoWindow = {
     return `
       
       <a href="/object/a1" class="card card_place card_xs">
-      <div class="card__photo" style="background-image: url('http://yalta.insday.ru/images/data/${room.photo}');"></div> 
+      <div class="card__photo" style="background-image: url('/images/data/${room.photo}');"></div> 
       <div class="card__body">
       <div class="card__title">
 				${room.title}

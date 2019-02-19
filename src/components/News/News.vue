@@ -5,19 +5,22 @@
 				<div class="container">
 					<div class="section__title">Новости</div>
 					<ul class="newsPagination">
-						<li class="newsPagination__item is-active"
+						<li class="newsPagination__item"
 							v-if="newsArr"
-							v-for="(value, key) in newsArr"
+							v-for="(value, key, index) in newsArr"
 							:key="key"
+							:class="{'is-active': key === activeIndex}"
+							@click="changeCategory(key)"
 							>
 							<span>{{key}}</span>
 						</li>
 					</ul>
 
 					<div class="newsList">
+
 						<news-item
-								v-if="newsArr[2018].news"
-								v-for="(item, index) in newsArr[2018].news"
+								v-if="currentYear.news"
+								v-for="(item, index) in currentYear.news"
 								:key="index"
 								:announce="item.announce"
 								:date="item.date"
@@ -41,22 +44,37 @@
   import NewsItem from '@/components/News/NewsItem'
 
   export default {
+    data: () => ({
+	  activeIndex: '2018',
+	  currentYear: {}
+    }),
     components: {
       NewsItem,
     },
+    computed: {
+      ...mapState({
+        newsArr: state => state.news.newsObjects
+      }),
+    },
+	methods: {
+      changeCategory(key) {
+        this.activeIndex = key;
+        this.currentYear = this.newsArr[key];
+	  }
+	},
     mounted() {
       document.querySelector('.header').classList.remove('is-active');
       document.querySelector('.btn-burger').classList.remove('is-active');
       document.querySelector('.mobileMenu').classList.remove('is-active');
 
       if (store.state.news.newsObjects.length === 0) {
-        store.dispatch(FETCH_NEWS);
-      }
+        store.dispatch(FETCH_NEWS).then(() => {
+          this.currentYear = this.newsArr[Number(this.activeIndex)];
+		});
+      } else {
+        this.currentYear = this.newsArr[Number(this.activeIndex)];
+	  }
     },
-    computed: {
-      ...mapState({
-        newsArr: state => state.news.newsObjects
-      }),
-    }
+
   }
 </script>

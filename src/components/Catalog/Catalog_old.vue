@@ -30,7 +30,7 @@
 									 v-on:mouseleave="unHoverObject()"
 									 :key="card.id">
 
-									<Card :photo="replaceUrl(mainurl + card.photo)"
+									<Card :photo="replaceUrl(card.photo)"
 										  :title="card.title"
 										  :id="card.id"
 										  :price="card.price"
@@ -154,7 +154,7 @@
         //     this.markers[i].icon.url = '123';
 		//   }
         // }
-        
+
 	  },
       fetchForm(route) {
         let self = this;
@@ -191,7 +191,6 @@
       ...mapState({
         submitFlag: state => state.filterObjects.submitFlag,
         fetchCards: state => state.filterObjects.objects,
-        mainurl: state => state.mainurl,
         fields: state => state.fieldsform.fields,
       }),
       markers() {

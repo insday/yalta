@@ -46,7 +46,8 @@
 								<span>
 								{{ objectData.location }}
 							</span>
-								<a href="#" class="location__link">На карте</a>
+								<a href="#map" class="location__link"
+								   v-smooth-scroll="{duration: 1000}">На карте</a>
 							</div>
 						</div>
 						<div class="col col_right">
@@ -95,8 +96,9 @@
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"
 											 v-for="slide in objectData.slider"
-											 :style="{ backgroundImage: `url('${replaceUrl(mainurl + slide)}')` }">
-											<a href="#" class="gallery__zoom" @click.prevent="showGallery()">
+											 :style="{ backgroundImage: `url('${replaceUrl(slide)}')` }">
+											<a href="#" class="gallery__zoom"
+											   @click.prevent="showGallery()">
 												<span></span>
 											</a>
 										</div>
@@ -108,22 +110,9 @@
 										 v-for="slide, index in objectData.slider"
 										 :class="[activeThumbs === index ? 'is-active' : '']"
 										 @click="slideTo(index)"
-										 :style="{ backgroundImage: `url('${replaceUrl(mainurl + slide)}')` }">
+										 :style="{ backgroundImage: `url('${replaceUrl(slide)}')` }">
 									</div>
 								</div>
-
-								<!--<div class="galleryThumbs swiper-container"-->
-									 <!--ref="galleryThumbsSlider"-->
-									 <!--v-swiper:galleryThumbsSlider="galleryThumbs">-->
-									<!--<div class="swiper-button swiper-button-prev"></div>-->
-									<!--<div class="swiper-button swiper-button-next"></div>-->
-									<!--<div class="swiper-wrapper">-->
-										<!--<div class="swiper-slide"-->
-											 <!--v-for="slide in objectData.slider"-->
-											 <!--:style="{ backgroundImage: `url('${replaceUrl(mainurl + slide)}')` }">-->
-										<!--</div>-->
-									<!--</div>-->
-								<!--</div>-->
 							</affix>
 						</div>
 						<div class="col col_right">
@@ -168,8 +157,10 @@
 									<div class="objectBox-info__list">
 										<div class="objectBox-info__item flex flex-vcenter"
 											 v-for="item in objectData.params">
-												<div class="objectBox-info__icon"><img :src="'/images/data/' + item.icon" /></div>
-												<div class="objectBox-info__header">{{ item.header }}</div>
+											<div class="objectBox-info__icon"><img
+													:src="'/images/data/' + item.icon"/></div>
+											<div class="objectBox-info__header">{{ item.header }}
+											</div>
 										</div>
 									</div>
 								</div>
@@ -189,33 +180,16 @@
 										</div>
 										<ul class="shareList">
 											<li class="shareList__item">
-												<a href="#">
+												<a href="#" @click="createShare('fb')">
 													<img src="/static/img/fb.svg" alt="">
 												</a>
 											</li>
 											<li class="shareList__item">
-												<a href="#">
+												<a href="#" @click="createShare('vk')">
 													<img src="/static/img/vk.svg" alt="">
 												</a>
 											</li>
 										</ul>
-									</div>
-									<div id="map" v-if="mapOptions.coords">
-										<yandex-map
-												class="ymap"
-												:coords="mapOptions.coords"
-												:placemarks="mapOptions.placemarks"
-												:scroll-zoom="false"
-										>
-											<ymap-marker
-													marker-type="placemark"
-													:coords="mapOptions.coords"
-													hint-content="Hint content 1"
-													:balloon="{header: 'header', body: 'body', footer: 'footer'}"
-													:icon="{color: 'green', glyph: 'cinema'}"
-													markerId="1"
-											></ymap-marker>
-										</yandex-map>
 									</div>
 								</div>
 							</div>
@@ -269,6 +243,7 @@
 <script>
   import '../../compiled-icons/star'
   import GridSlider from '@/components/GridSlider.vue'
+  import {Share} from '@/plugins/sharing.js'
   import {ObjectService} from '@/common/api.service'
   import store from '@/store';
 
@@ -299,7 +274,7 @@
           }
         ],
       },
-	  activeThumbs: 0,
+      activeThumbs: 0,
       fetchCards: null,
       galleryMain: {
         speed: 500,
@@ -325,56 +300,63 @@
       markerIcon() {
         return 'assets/location.svg'
       },
-      mainurl() {
-        return store.state.mainurl;
-      },
     },
     methods: {
+      createShare(social) {
+        switch (social) {
+          case 'vk':
+            Share.vkontakte(window.location.href, this.objectData.title, `/images/data/${this.objectData.photo}`,'DESC');
+            break;
+		  case 'fb':
+            Share.facebook(window.location.href, this.objectData.title, `/images/data/${this.objectData.photo}`,'DESC');
+		    break;
+        }
+      },
       slideTo(index) {
         const galleryMainSlider = this.$refs.galleryMainSlider.swiper;
         galleryMainSlider.slideTo(index);
-	  },
+      },
       formatPrice(value) {
-	    if (isNaN(value))
-			value = 0
-        let val = (value.split(',')[0]/1).toFixed(0)
+        if (isNaN(value))
+          value = 0
+        let val = (value.split(',')[0] / 1).toFixed(0)
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
       },
       replaceUrl(url) {
         let newUrl = url.replace(/\s/g, '%20');
-        return newUrl;
+        return '/images/data/' + newUrl;
       },
       checkFavorite() {
-        let self = this;
 
         Object.keys(store.state.favorite.favoriteObjects).forEach((key) => {
           if (key === this.$route.params.objectId) {
-            self.favoriteStatus = true;
+            this.favoriteStatus = true;
           } else {
-            // self.favoriteStatus = false;
+            this.favoriteStatus = false;
           }
         })
       },
       toggleFavorite() {
         if (store.state.auth.isAuthenticated !== false) {
-          let self = this;
+
           let data = {
             id: this.$route.params.objectId,
             token: store.state.auth.user.token
           };
 
           if (this.favoriteStatus === false) {
+            console.log(123);
             store.dispatch(ADD_FAVORITE_CARDS, data).then((res) => {
-              res === true ? self.favoriteStatus = true : self.favoriteStatus = false;
+              res === true ? this.favoriteStatus = true : this.favoriteStatus = false;
             })
           } else {
             store.dispatch(REMOVE_FAVORITE_CARDS, data).then((res) => {
-              res === true ? self.favoriteStatus = false : self.favoriteStatus = true;
+              res === true ? this.favoriteStatus = false : this.favoriteStatus = true;
             })
           }
-		} else {
+        } else {
           this.$modal.show('sign-in');
-		}
+        }
 
       },
       whiteSpaces(value) {
@@ -395,16 +377,14 @@
 
         });
       },
-	  showGallery() {
+      showGallery() {
         this.$modal.show('gallery-modal');
-	  }
+      }
     },
     mounted() {
       document.querySelector('.header').classList.remove('is-active');
       document.querySelector('.btn-burger').classList.remove('is-active');
       document.querySelector('.mobileMenu').classList.remove('is-active');
-
-      this.checkFavorite();
 
       ObjectService
         .get(this.$route.params.objectId)
@@ -417,23 +397,17 @@
 
       this.$nextTick(() => {
         const galleryMainSlider = this.$refs.galleryMainSlider.swiper;
-        // const galleryThumbsSlider = this.$refs.galleryThumbsSlider.swiper;
-		const self = this;
 
-		galleryMainSlider.on('slideChange', () => {
+        galleryMainSlider.on('slideChange', () => {
           this.activeThumbs = galleryMainSlider.activeIndex;
         });
 
-        // galleryMainSlider.controller.control = galleryThumbsSlider;
-        // galleryThumbsSlider.controller.control = galleryMainSlider;
-
+        this.toggleObjectHeader();
       });
 
       setTimeout(() => {
-        // fixedBlock(this.$refs.galleryWrapper, 80 + 48, 0);
-        this.toggleObjectHeader();
-      }, 1000)
-
+        this.checkFavorite();
+      }, 300)
     },
   }
 </script>

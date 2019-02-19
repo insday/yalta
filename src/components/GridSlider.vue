@@ -4,7 +4,7 @@
 			<div class="swiper-slide"
 				 v-for="card in slides"
 				 :key="card.id">
-				<Card :photo="mainurl + card.photo"
+				<Card :photo="card.photo"
 					  :id="card.id"
 					  :title="card.title"
 					  :price="card.price"
@@ -52,10 +52,5 @@
         },
       },
 	}),
-	computed: {
-      mainurl() {
-        return this.$store.state.mainurl
-	  }
-	}
   }
 </script>

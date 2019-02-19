@@ -17,7 +17,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"
 							 v-for="slide in objectData.slider">
-							<img :src="replaceUrl(mainurl + slide)" alt="">
+							<img :src="replaceUrl(slide)" alt="">
 						</div>
 					</div>
 				</div>
@@ -47,15 +47,12 @@
     computed: {
       ...mapState({
         catalogType: state => state.filter.catalogType,
-      }),
-      mainurl() {
-        return store.state.mainurl;
-      },
+      })
     },
     methods: {
       replaceUrl(url) {
         let newUrl = url.replace(/\s/g, '%20');
-        return newUrl;
+        return '/images/data/' + newUrl;
       },
       hide() {
         this.$modal.hide('gallery-modal');

@@ -51,7 +51,7 @@
       LocationSlider,
       HeroInfo,
     },
-    props: ['offerInfo', 'sliders', 'mainurl'],
+    props: ['offerInfo', 'sliders'],
     data: () => ({
       heroMainOption: {
         speed: 500,

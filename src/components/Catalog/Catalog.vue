@@ -28,7 +28,7 @@
 									 v-for="(card, index) in fetchCards"
 									 :key="card.id">
 
-									<Card :photo="replaceUrl('/images/data/' + card.photo)"
+									<Card :photo="card.photo"
 										  :title="card.title"
 										  :id="card.id"
 										  :price="card.price"
@@ -161,7 +161,6 @@
       ...mapState({
         submitFlag: state => state.filterObjects.submitFlag,
         fetchCards: state => state.filterObjects.objects,
-        mainurl: state => state.mainurl,
         fields: state => state.fieldsform.fields,
       }),
       markers() {

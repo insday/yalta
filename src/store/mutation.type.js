@@ -10,6 +10,8 @@ export const SET_NEWS = 'SET_NEWS';
 
 export const SET_FIELDS_FORM = 'SET_FIELDS_FORM';
 export const SET_FAVORITE_CARDS = 'SET_FAVORITE_CARDS';
+export const ADD_TO_FAVORITE_CARDS = 'ADD_TO_FAVORITE_CARDS';
+export const REMOVE_FAVORITE_CARD = 'REMOVE_FAVORITE_CARD';
 
 export const PURGE_AUTH = 'logOut';
 export const SET_AUTH = 'setUser';

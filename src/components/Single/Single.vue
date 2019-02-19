@@ -29,7 +29,7 @@
 					<h1>{{article.header}}</h1>
 					<span class="date">{{article.date}}</span>
 					<div v-html="article.text"></div>
-					<img :src="mainurl + article.picture" alt="">
+					<img :src="article.picture" alt="">
 					<div	v-if="article.text_d"
 							v-html="article.text_d"></div>
 				</div>
@@ -47,11 +47,6 @@
     data: () => ({
       article: '',
     }),
-    computed: {
-      mainurl: () => {
-        return store.state.mainurl;
-      }
-    },
     watch: {
       '$route'(to, from) {
         if (to.path !== from.path) {

@@ -16,9 +16,8 @@
 
 					<StepOne
 							v-if="stepCounter === 1"
-							:icon="mainurl + wizardOptions.fields.icon1"
+							:icon="wizardOptions.fields.icon1"
 							:btn="true"
-							:mainurl="mainurl"
 							:wizardOptions="wizardOptions"
 					/>
 
@@ -53,7 +52,7 @@
 								</div>
 								<div class="col col_right">
 									<icon-box
-											:icon="mainurl + wizardOptions.fields.icon2"
+											:icon="wizardOptions.fields.icon2"
 									/>
 								</div>
 							</div>
@@ -112,7 +111,7 @@
 								</div>
 								<div class="col col_right">
 									<icon-box
-											:icon="mainurl + wizardOptions.fields.icon3"
+											:icon="wizardOptions.fields.icon3"
 									/>
 								</div>
 							</div>
@@ -171,7 +170,7 @@
 								<div class="col col_right">
 									<div class="iconBox">
 										<icon-box
-												:icon="mainurl + wizardOptions.fields.icon4"
+												:icon="wizardOptions.fields.icon4"
 										/>
 
 									</div>
@@ -254,7 +253,7 @@
       IconBox,
       StepOne,
     },
-    props: ['wizardOptions', 'mainurl'],
+    props: ['wizardOptions'],
     data: () => ({
       tab2Counter: "1",
       tab3Counter: "4",

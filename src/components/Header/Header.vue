@@ -34,14 +34,14 @@
 							v-if="!isAuthenticated"
 							@click.prevent="showModal()">
 						<div class="btn__value">
-							{{Object.keys(favoriteObjects).length > 0 ? Object.keys(favoriteObjects).length - 1 : 0}}
+							{{favoriteCounter}}
 						</div>
 						<span>Избранные <br />объекты</span>
 					</a>
 					<router-link :to="{name: 'Profile'}" class="btn btn-login"
 							v-if="isAuthenticated">
 						<div class="btn__value">
-							{{Object.keys(favoriteObjects).length > 0 ? Object.keys(favoriteObjects).length - 1 : 0}}
+							{{favoriteCounter}}
 						</div>
 						<span>Избранные <br />объекты</span>
 					</router-link>
@@ -113,6 +113,7 @@
         isAuthenticated: state => state.auth.isAuthenticated,
 		contacts: state => state.layout.footer,
 		favoriteObjects: state => state.favorite.favoriteObjects,
+		favoriteCounter: state => state.favorite.favoriteCounter,
       })
 	},
     methods: {

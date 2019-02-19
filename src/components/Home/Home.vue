@@ -1,8 +1,8 @@
 <template>
 	<transition name="component-fade" mode="out-in">
 		<div class="page-home">
-			<Hero :offerInfo="offerInfo" :sliders="sliders" :mainurl="mainurl"/>
-			<Wizard :mainurl="mainurl" :wizardOptions="wizardOptions" v-if="wizardOptions"/>
+			<Hero :offerInfo="offerInfo" :sliders="sliders"/>
+			<Wizard :wizardOptions="wizardOptions" v-if="wizardOptions"/>
 			<Advantages :advantagesData="advantagesData"/>
 		</div>
 	</transition>
@@ -66,10 +66,5 @@
           });
         })
     },
-    computed: {
-      mainurl: () => {
-        return store.state.mainurl;
-      }
-    }
   };
 </script>

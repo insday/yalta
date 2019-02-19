@@ -15,7 +15,7 @@
 							 v-for="card in favoriteObjects"
 							 :key="card.id">
 
-							<Card :photo="mainurl + card.photo"
+							<Card :photo="card.photo"
 								  :title="card.title"
 								  :id="card.id"
 								  :price="card.price"
@@ -64,7 +64,6 @@
     computed: {
 	  ...mapState({
         isAuthenticated: state => state.auth.isAuthenticated,
-        mainurl: state => state.mainurl,
         favoriteObjects: state => state.favorite.favoriteObjects
 	  })
 	},

@@ -1,7 +1,7 @@
 <template>
 	<div class="advantagesItem" :key="title">
 		<div class="advantagesItem__icon">
-			<img :src="mainurl + icon">
+			<img :src="icon">
 		</div>
 		<div class="advantagesItem__content">
 			<div class="advantagesItem__title">
@@ -17,6 +17,6 @@
 <script>
   export default {
     name: 'AdvantagesItem',
-	props: ['title', 'text', 'icon', 'mainurl', 'url'],
+	props: ['title', 'text', 'icon', 'url'],
   }
 </script>

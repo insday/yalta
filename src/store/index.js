@@ -14,7 +14,6 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    mainurl: '',
     valTransform: 0,
   },
   modules: {

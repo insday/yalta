@@ -2,7 +2,7 @@
 	<ul class="socials">
 		<li class="socials__item" :key="item.sicon" v-for="item in socials">
 			<a :href=item.surl class="socials__link">
-				<img :src="mainurl +item.sicon" alt="">
+				<img :src="item.sicon" alt="">
 			</a>
 		</li>
 	</ul>
@@ -14,11 +14,6 @@
 
   export default {
     name: 'Socials',
-    props: ['socials'],
-    computed: {
-      mainurl: () => {
-        return store.state.mainurl;
-      },
-    }
+    props: ['socials']
   };
 </script>

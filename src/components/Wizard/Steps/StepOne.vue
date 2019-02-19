@@ -4,7 +4,7 @@
 		<div class="wizard__left" v-in-viewport.once>
 
 			<Agent :name="wizardOptions.fields.name"
-				   :photo="mainurl + wizardOptions.fields.photo"
+				   :photo="wizardOptions.fields.photo"
 				   :description="wizardOptions.fields.occup"/>
 
 			<form class="form wizardCatalog">
@@ -236,7 +236,7 @@
 
 
   export default {
-    props: ['icon', 'btn', 'wizardOptions', 'mainurl'],
+    props: ['icon', 'btn', 'wizardOptions'],
 
     data: () => ({
       formSelects: [

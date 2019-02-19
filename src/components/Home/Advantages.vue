@@ -12,7 +12,6 @@
 								 :title="item.adv_title"
 								 :icon="item.adv_icon"
 								 :text="item.adv_text"
-								 :mainurl="mainurl"
 								 :key="item.adv_title + '1'"
 								 :url="item.adv_url"/>
 			</div>
@@ -24,7 +23,6 @@
 									 :title="item.adv_title"
 									 :icon="item.adv_icon"
 									 :text="item.adv_text"
-									 :mainurl="mainurl"
 									 class="swiper-slide"
 									 :url="item.adv_url"/>
 				</div>
@@ -53,11 +51,6 @@
           type: 'bullets',
         }
       },
-    }),
-    computed: {
-      mainurl: () => {
-        return store.state.mainurl;
-      }
-    }
+    })
   };
 </script>

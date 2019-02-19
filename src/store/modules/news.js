@@ -13,7 +13,7 @@ export const state = Object.assign({}, initialState);
 
 export const actions = {
   [FETCH_NEWS] (state) {
-    NewsService.get()
+    return NewsService.get()
       .then(({data}) => {
           state.commit(SET_NEWS, data);
       })

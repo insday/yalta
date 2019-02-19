@@ -257,18 +257,20 @@
 				@include rmin($mob) {
 					&:before {
 						content: '';
-						display: inline-block;
-						width: 14px;
-						height: 14px;
-						background-color: #c4c4c4;
-						border-radius: 100%;
-						vertical-align: middle;
-						margin-right: 8px;
-						margin-top: -2px;
 					}
 				}
 			}
+
+			&__icon {
+				display: inline-block;
+				max-width: 14px;
+				max-height: 14px;
+				vertical-align: middle;
+				margin-right: 8px;
+				margin-top: -2px;
+			}
 		}
+
 
 		&__table {
 			border-top: 1px solid #F2F2F2;

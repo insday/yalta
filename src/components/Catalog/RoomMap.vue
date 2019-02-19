@@ -64,7 +64,6 @@
     methods: {
       formatPrice(value) {
         let val = (value.split(',')[0] / 1).toFixed(2).replace('.', ',');
-
         return parseFloat(val.replace(/\B(?=(\d{3})+(?!\d))/g, "."));
       },
       updateMap() {
@@ -126,11 +125,14 @@
         })
       },
       addMarkers() {
+        console.log(this.rooms);
+
         this.markers = Object.values(this.rooms).map((room) => {
           let {x, y} = room;
-
           let lat = Number(x);
           let lng = Number(y);
+
+          if (isNaN(lat) || isNaN(lng)) return;
 
           const marker = new this.MarkerWithLabel(this.getMarkerLabelOptions({
             lat,
@@ -157,7 +159,7 @@
           draggable: false,
           raiseOnDrag: true,
           labelContent: `<div class="${lableContentClass}"><span>${
-            this.formatPrice(room.price) + ' млн'
+          this.formatPrice(room.price) + ' млн'
             }</span></div>`,
           labelClass: 'map-price-container'
         }
@@ -186,11 +188,13 @@
         const infoWindow = this.resetInfoWindow()
         this.map.addListener('click', event => infoWindow.close())
         this.handleInfoWindowDomReady(this.infoWindow)
-        this.markers.forEach(marker =>
-          marker.addListener('click', function () {
-            infoWindow.setContent(infoWindowHelper.getContentHtml(this))
-            infoWindow.open(vm.map, this)
-          })
+        this.markers.forEach(marker => {
+            if (typeof (marker) === 'undefined') return;
+            marker.addListener('click', function () {
+              infoWindow.setContent(infoWindowHelper.getContentHtml(this))
+              infoWindow.open(vm.map, this)
+            })
+          }
         )
       }
     },
@@ -207,7 +211,7 @@
         })
 
         this.googleMaps = google.maps
-        this.initMap()
+        this.initMap();
         this.addEvenListeners()
       } catch (e) {
         console.log(e)
