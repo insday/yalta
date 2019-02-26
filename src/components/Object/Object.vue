@@ -305,10 +305,10 @@
       createShare(social) {
         switch (social) {
           case 'vk':
-            Share.vkontakte(window.location.href, this.objectData.title, `/images/data/${this.objectData.photo}`,'DESC');
+            Share.vkontakte(window.location.href, this.objectData.title, `http://yalta.insday.ru/images/data/${this.objectData.photo}`,'DESC');
             break;
 		  case 'fb':
-            Share.facebook(window.location.href, this.objectData.title, `/images/data/${this.objectData.photo}`,'DESC');
+            Share.facebook(window.location.href, this.objectData.title, `http://yalta.insday.ru/images/data/${this.objectData.photo}`,'DESC');
 		    break;
         }
       },
@@ -324,7 +324,7 @@
       },
       replaceUrl(url) {
         let newUrl = url.replace(/\s/g, '%20');
-        return '/images/data/' + newUrl;
+        return newUrl;
       },
       checkFavorite() {
 

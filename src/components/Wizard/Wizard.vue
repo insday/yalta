@@ -210,7 +210,7 @@
 			<div class="container">
 				<div class="section__head">
 					<div class="section__title">
-						Жилые дома
+						Найдено объектов: {{Object.keys(fetchCards).length}}
 					</div>
 					<div class="section__head__right">
 

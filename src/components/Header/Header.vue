@@ -17,7 +17,7 @@
 			<div class="header__left">
 				<div class="header__logo logo">
 					<router-link to="/">
-						Дипломат
+						<img :src=headerData.logo />
 					</router-link>
 				</div>
 				<Nav :menu=menu />

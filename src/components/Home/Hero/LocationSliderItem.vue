@@ -13,7 +13,7 @@
 				<div class="locationSlider-info__value">
 					<span> {{ area.split(' ')[0] }} </span>
 					<small v-if="area.split(' ')[1]"> {{ area.split(' ')[1] }}</small>
-					<small v-else-if="!area.split(' ')[1]"> руб.</small>
+					<small v-else-if="!area.split(' ')[1]"> м<sup>2</sup></small>
 				</div>
 			</div>
 			<div class="locationSlider-info__item">
