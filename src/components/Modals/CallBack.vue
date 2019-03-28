@@ -115,7 +115,6 @@
         let data = new FormData();
         data.append("json", JSON.stringify(payload));
 
-
         this.$v.$touch()
         if (this.$v.$invalid) {
           this.submitStatus = 'ERROR'
@@ -127,7 +126,9 @@
           }, 500)
         }
 
-        // ModalForm.post(data)
+        ModalForm.post(data).then(() => {
+          this.hide();
+		})
       }
     }
   }

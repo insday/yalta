@@ -21,7 +21,6 @@
 				<div class="authSocials">
 					<div class="authSocials__item">
 						<a href="#"
-						   @click.prevent="authVk()"
 						   class="authSocials__link authSocials__link--vk">
 							<svg width="29" height="17" viewBox="0 0 29 17" fill="none"
 								 xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +32,6 @@
 
 					<div class="authSocials__item">
 						<a href="#"
-						   @click.prevent="authFB()"
 						   class="authSocials__link authSocials__link--fb">
 							<svg width="13" height="25" viewBox="0 0 13 25" fill="none"
 								 xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +43,6 @@
 
 					<div class="authSocials__item">
 						<a href="#"
-						   @click.prevent="authG()"
 							class="authSocials__link authSocials__link--google">
 							<img src="/static/img/google.png" alt="">
 						</a>
@@ -128,12 +125,6 @@
 
   import {required, minLength, email, sameAs} from 'vuelidate/lib/validators'
 
-  import {ModalForm} from '@/common/api.service'
-
-  VK.init({
-    apiId: 6375627
-  });
-
   export default {
     data: () => ({
       email: '',
@@ -157,97 +148,6 @@
       }
     },
     methods: {
-      authVk() {
-        let appId = 6841467;
-        let redirectUri = 'http://yalta.insday.ru';
-        let url = 'https://oauth.vk.com/authorize?client_id=' + appId + '&display=popup&redirect_uri=' + redirectUri + '&response_type=token&scope=email';
-        let newWin = window.open(url, 'vk-login', 'width=665,height=370');
-        let self = this;
-
-        newWin.onload = function () {
-          self.hashTarget = newWin.location.hash;
-          const hashNew = self.hashTarget.split("&").map(v => v.split("=")).reduce((pre, [key, value]) => ({
-            ...pre,
-            [key]: value
-          }), {});
-		  
-          self.$store.dispatch(REGISTER, {
-            login: hashNew.email,
-            name: hashNew.user_id,
-            password: hashNew.user_id,
-            password2: hashNew.user_id,
-          })
-            .then(({err}) => {
-              console.log(123)
-              if (err === true) {
-                self.$store.dispatch(LOGIN, {
-                  login: hashNew.email,
-                  password: hashNew.user_id,
-                })
-                  .then(() => {
-                    self.$router.push({name: 'Profile'});
-                    self.$modal.hide('sign-in');
-                    self.$modal.hide('sign-up');
-                  });
-
-			  } else {
-                self.$router.push({name: 'Profile'});
-                self.$modal.hide('sign-in');
-                self.$modal.hide('sign-up');
-			  }
-              newWin.close();
-			  newWin.opener.location.reload();
-            });
-        }
-
-        VK.Auth.login(function (data) {
-           console.log(data)
-        })
-      },
-      authFB() {
-        let appId = 974186509452346;
-        let redirectUri = 'http://yalta.insday.ru/';
-        let url = 'https://oauth.vk.com/authorize?client_id=' + appId + '&display=popup&redirect_uri=' + redirectUri + '&response_type=token&scope=email';
-        let newWin = window.open(url, 'vk-login', 'width=665,height=370');
-        let self = this;
-
-        newWin.onload = function () {
-          self.hashTarget = newWin.location.hash;
-          const hashNew = self.hashTarget.split("&").map(v => v.split("=")).reduce((pre, [key, value]) => ({
-            ...pre,
-            [key]: value
-          }), {});
-		  
-          self.$store.dispatch(REGISTER, {
-            login: hashNew.email,
-            name: hashNew.user_id,
-            password: hashNew.user_id,
-            password2: hashNew.user_id,
-          })
-            .then(({err}) => {
-              console.log(123)
-              if (err === true) {
-
-                self.$store.dispatch(LOGIN, {
-                  login: hashNew.email,
-                  password: hashNew.user_id,
-                })
-                  .then(() => {
-                    self.$router.push({name: 'Profile'});
-                    self.$modal.hide('sign-in');
-                    self.$modal.hide('sign-up');
-                  });
-
-			  } else {
-                self.$router.push({name: 'Profile'});
-                self.$modal.hide('sign-in');
-                self.$modal.hide('sign-up');
-			  }
-              newWin.close();
-			  newWin.opener.location.reload();
-            });
-        }
-      },
       setMail(value) {
         this.email = value;
         this.$v.email.$touch();
